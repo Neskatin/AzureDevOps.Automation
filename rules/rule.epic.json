@@ -1,0 +1,17 @@
+{
+  "type": "Epic",
+  "rules": [
+    {
+      "ifChildState": [ "Active" ],
+      "notParentStates": [ "Active", "Removed" ],
+      "setParentStateTo": "Active",
+      "allChildren": false
+    },
+    {
+      "ifChildState": [ "Closed", "Removed" ],
+      "notParentStates": [ "Closed", "Removed" ],
+      "setParentStateTo": "Closed",
+      "allChildren": true
+    }
+  ]
+}

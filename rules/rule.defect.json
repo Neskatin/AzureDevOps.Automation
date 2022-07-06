@@ -1,0 +1,17 @@
+{
+  "type": "Defect",
+  "rules": [
+    {
+      "ifChildState": [ "In Progress" ],
+      "notParentStates": [ "Active", "Closed", "Removed" ],
+      "setParentStateTo": "Active",
+      "allChildren": false
+    },
+    {
+      "ifChildState": [ "Closed", "Removed" ],
+      "notParentStates": [ "Closed", "Removed" ],
+      "setParentStateTo": "Closed",
+      "allChildren": true
+    }
+  ]
+}
